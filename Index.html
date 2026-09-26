@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo" onclick="location.href='index.html'">HisCar</div>
+        <div class="navbar">
+            <div class="text">Новинки</div>
+            <div class="text">Необычные</div>
+            <div class="text">Провальные</div>
+            <div class="text">Легендарные</div>
+            <div class="text">Из кино</div>
+            <div class="text">Справка</div>
+        </div>
+        <div class="profile" onclick="location.href='login.html'"></div>
+    </header>
+
+    <div class="container">
+
+        <section class="hero-banner">
+            <img class="hero-img"
+                 src="https://c.animaapp.com/EBE1cRbq/img/foto.png"
+                 alt="Автомобильный баннер">
+
+            <p class="hero-text">
+                Всё новое — это хорошо <br>
+                забытое старое
+            </p>
+
+            <a href="#" class="hero-btn">
+                <span>Каталог</span>
+            </a>
+        </section>
+
+        <section class="search-section">
+            <h2 class="search-title">Поиск</h2>
+
+            <form id="searchForm" onsubmit="return false;">
+                <div class="search-box">
+                    <input type="text"
+                           id="searchInput"
+                           class="search-input"
+                           placeholder="Ford Mustang 2008">
+                </div>
+
+                <div class="search-actions">
+
+                    <details class="dropdown">
+                        <summary id="sortText" class="sort-btn">Сортировка</summary>
+                        <div class="dropdown-menu" id="sortMenu">
+                            <div class="sort-option active-filter" data-sort="">- по умолчанию -</div>
+                            <div class="sort-option" data-sort="views">По просмотрам</div>
+                            <div class="sort-option" data-sort="likes">По лайкам</div>
+                            <div class="sort-option" data-sort="new">Сначала новые</div>
+                        </div>
+                    </details>
+
+                    <details class="dropdown">
+                        <summary id="categoryText" class="filter-btn">Фильтрация</summary>
+                        <div class="dropdown-menu" id="categoryMenu">
+                        </div>
+                    </details>
+
+                    <button type="submit" class="filter-btn">Применить</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="categories-section">
+            <div class="categories-grid" id="categoriesGrid">
+            </div>
+        </section>
+
+        <section class="cars-grid" id="carsGrid">
+        </section>
+
+        <div class="pagination" id="pagination">
+        </div>
+
+        <footer class="copyright">
+            © 2026 HisCar
+        </footer>
+    </div>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Главная</span>
+        </div>
+        <div class="nav-item">
+            <i class="fa-regular fa-star"></i>
+            <span>Избранное</span>
+        </div>
+        <div class="nav-item">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>Добавить</span>
+        </div>
+        <div class="nav-item" onclick="location.href='login.html'">
+            <i class="fa-regular fa-user"></i>
+            <span>Профиль</span>
+        </div>
+    </nav>
+
+    <div class="home-indicator"></div>
+
+    <script src="../js/Index.js"></script>
+</body>
+</html>
